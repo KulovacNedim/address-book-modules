@@ -1,11 +1,11 @@
 package packt.addressbook.model;
 
-public class Contac implements Comparable {
+public class Contact implements Comparable {
     private String id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
-    public Contac(String id, String firstName,
+    public Contact(String id, String firstName,
                    String lastName, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
@@ -17,7 +17,7 @@ public class Contac implements Comparable {
         return this.firstName + " " + this.lastName;
     }
     public int compareTo(Object other) {
-        Contac otherContact = (Contac)other;
+        Contact otherContact = (Contact)other;
         return this.lastName.compareTo(otherContact.lastName);
     }
 }
