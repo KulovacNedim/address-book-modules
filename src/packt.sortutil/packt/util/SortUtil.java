@@ -1,4 +1,4 @@
-package packt.addressbook.util;
+package packt.util;
 
 import java.util.List;
 

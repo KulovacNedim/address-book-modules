@@ -7,8 +7,8 @@ import java.util.List;
 
 public class ContactUtil {
 	
-    public List<Contac> getContacts() {
-        List<Contac> contacts = Arrays.asList(
+    public List<Contact> getContacts() {
+        List<Contact> contacts = Arrays.asList(
                 new Contact("1", "Edsger", "Dijkstra","345-678-9012"),
                 new Contact("2", "Alan", "Turing", "456-789-0123"),
                 new Contact("3", "Ada", "Lovelace", "234-567-8901"),
