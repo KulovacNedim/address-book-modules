@@ -1,4 +1,4 @@
-package packt.addressbook.model;
+package packt.contact.model;
 
 public class Contact implements Comparable {
     private String id;
