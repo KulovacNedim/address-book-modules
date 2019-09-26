@@ -22,18 +22,16 @@ public class ContactLoader {
 		try {
 			doc = xmlUtil.loadXmlFile(fileName);
 			
-			 NodeList nList = doc.getElementsByTagName("contact");
-      for (int temp = 0; temp < nList.getLength(); temp++)
-      {
-         Node node = nList.item(temp);
-         if (node.getNodeType() == Node.ELEMENT_NODE)
-         {
-            Element eElement = (Element) node;
-			Contact contact = new Contact("id", eElement.getElementsByTagName("firstname").item(0).getTextContent(), eElement.getElementsByTagName("lastname").item(0).getTextContent(), "000-000-000");
-            contacts.add(contact);
-         }
-      }
-      return contacts;
+			NodeList nList = doc.getElementsByTagName("contact");
+			for (int temp = 0; temp < nList.getLength(); temp++) {
+				Node node = nList.item(temp);
+				if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element eElement = (Element) node;
+				Contact contact = new Contact("id", eElement.getElementsByTagName("firstname").item(0).getTextContent(), eElement.getElementsByTagName("lastname").item(0).getTextContent(), "000-000-000");
+				contacts.add(contact);
+			 }
+		  }
+		  return contacts;
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			throw new ContactLoadException("Unable to load Contact file");
 		}
