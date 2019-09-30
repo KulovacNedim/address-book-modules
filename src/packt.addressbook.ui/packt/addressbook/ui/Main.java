@@ -37,20 +37,26 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 
 		List<Contact> contacts = new ArrayList<>();
-		ContactLoader contactLoader = new ContactLoader();
-		SortUtil sortUtil = new SortUtil();
+		ContactLoader contactLoader = new ContactLoader();		
+		
 		try {
 			contacts = contactLoader.parseXml("assets/input.xml");
 		} catch (ContactLoadException e) {
 
 			System.exit(0);
 		}
-		sortUtil.sortList(contacts);
+		SortUtil sortUtil = SortUtil.getProviderInstance(contacts.size());
+		if (sortUtil != null) {
+			sortUtil.sortList(contacts);
+		}
+        
 		primaryStage.setTitle("Addressbook Viewer");
 
 		BorderPane root = new BorderPane();
 		HBox hbox = generateTitleHBox();
 		root.setTop(hbox);
+		
+		
 		
 		GridPane grid = new GridPane();
 	    grid.setVgap(10);
@@ -120,6 +126,7 @@ public class Main extends Application {
 		list.setPrefHeight(650);
 		root.setLeft(list);
 		root.setRight(grid);
+		
 		
 		primaryStage.setScene(new Scene(root, 700, 550));
 		primaryStage.show();
