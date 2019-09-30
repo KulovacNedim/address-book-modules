@@ -24,13 +24,6 @@ public class Main {
         List<Contact> contacts = new ArrayList<>();
         ContactLoader contactLoader = new ContactLoader();
 		
-		Iterable<SortUtil> sortUtils = ServiceLoader.load(SortUtil.class);
-		
-		for (SortUtil sortUtil : sortUtils) {
-			System.out.println("Found an instance of SortUtil");
-			sortUtil.sortList(contacts);
-		}
-		
         try {
             contacts = contactLoader.parseXml("assets/input.xml");
         } catch (ContactLoadException e) {
