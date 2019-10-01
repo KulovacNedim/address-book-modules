@@ -25,7 +25,7 @@ public class Main {
         ContactLoader contactLoader = new ContactLoader();
 		
         try {
-            contacts = contactLoader.parseXml("assets/input.xml");
+            contacts = contactLoader.parseXml("D:\\Workspace\\Java\\address-book-modules\\assets\\input.xml");
         } catch (ContactLoadException e) {
 			logger.severe(e.getMessage());
             System.exit(0);

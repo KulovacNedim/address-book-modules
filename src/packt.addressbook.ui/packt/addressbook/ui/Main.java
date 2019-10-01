@@ -40,7 +40,8 @@ public class Main extends Application {
 		ContactLoader contactLoader = new ContactLoader();		
 		
 		try {
-			contacts = contactLoader.parseXml("assets/input.xml");
+			contacts = contactLoader.parseXml("D:\\Workspace\\Java\\address-book-modules\\assets\\input.xml");
+			//contacts = contactLoader.parseXml("assets/input.xml");
 		} catch (ContactLoadException e) {
 
 			System.exit(0);
