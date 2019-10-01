@@ -41,7 +41,6 @@ public class Main extends Application {
 		
 		try {
 			contacts = contactLoader.parseXml("D:\\Workspace\\Java\\address-book-modules\\assets\\input.xml");
-			//contacts = contactLoader.parseXml("assets/input.xml");
 		} catch (ContactLoadException e) {
 
 			System.exit(0);
