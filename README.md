@@ -1,7 +1,7 @@
 # address-book-modules
 Simple Java 9 application coded while reading a book "Modular Programming in Java 9" written by [Koushik Kothagal](https://www.linkedin.com/in/koushiksrinivas/). Great book, I recommend reading it to anyone interested in Java 9+ modular platform.
 
-<img src="modules.jpg" title="modules" alt="modules.png">
+<img src="modules.JPG" title="modules" alt="modules.JPG">
 
 ## Clone
 
